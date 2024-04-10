@@ -1,6 +1,5 @@
 <template>
-    <div
-        class="header flex border-b min-h-16 items-center sticky top-0 bg-slate-100 dark:bg-slate-800 z-10">
+    <div class="header flex border-b min-h-16 items-center sticky top-0 bg-slate-100 dark:bg-slate-800 z-10">
         <div class="flex flex-1">
             <div class="dark:text-slate-50 grid gap-4 grid-flow-col">
                 <NuxtLink class="cursor-pointer" to="/">About Me</NuxtLink>
@@ -37,17 +36,24 @@ export default {
     },
     created() {
 
+
     },
     mounted() {
-
+        if (localStorage.getItem("darkMode") == 'true') {
+            this.toggleDarkMode();
+        }
     },
     methods: {
         toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
-            // this.isDarkMode = !this.isDarkMode;
-            // this.$nextTick().then(() => {
-            //     $(".svg-icon.dark path").css("fill", "white");
-            // });
+            let isDarkMode = document.documentElement.classList.contains('dark');
+            if (isDarkMode) {
+                localStorage.setItem("darkMode", true);
+            }
+            else {
+                localStorage.setItem("darkMode", false);
+            }
+
         },
     }
 }

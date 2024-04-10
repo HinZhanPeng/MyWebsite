@@ -22,7 +22,7 @@
                     <div class="text-sm" v-html="item.description">
                     </div>
                     <div class="font-extrabold text-xl">
-                        <a :href="item.website"><span class="underline underline-offset-1">Website</span></a>
+                        <a target="_blank" :href="item.website"><span class="underline underline-offset-1">Website</span></a>
                     </div>
                 </div>
                 
@@ -40,7 +40,7 @@ import dsiImage from '~/assets/image/dsi.jpg';
 import togagoImage from '~/assets/image/togago.png';
 import mayflowerImage from '~/assets/image/mayflower.jpg';
 import jmcImage from '~/assets/image/jmc.jpg';
-import iconnectixImage from '~/assets/image/iconnectix.png';
+import iconnectixImage from '~/assets/image/iconnectix.jpg';
 import $ from 'jquery';
 export default {
     data() {
