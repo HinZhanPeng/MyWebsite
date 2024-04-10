@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="grid gap-20">
-            <div v-for="(item, index) in workingExperience" class="flex border-b !pb-10 last:!border-b-0" style="    opacity: 1;
+            <div v-for="(item, index) in workingExperience" class="lg:flex border-b !pb-10 last:!border-b-0" style="    opacity: 1;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;">
-                <div v-if="index % 2 > 0" class="flex flex-1 mr-10 justify-center items-center border-2 rounded-2xl">
+                <div v-if="index % 2 > 0 || isTablet" class="flex flex-1 lg:mr-10 justify-center items-center lg:border-2 rounded-2xl mb-10 lg:mb-0">
                     <img width="200" :src="item.imagePath">
                 </div>
-                <div class="grid gap-10 w-1/3">
+                <div class="grid gap-10 lg:w-1/3 text-center">
                     <div class="text-xs mb-10">
                         {{ item.applicationType }}
                     </div>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 
-                <div v-if="index % 2 == 0" class="flex flex-1 ml-10 justify-center items-center border-2 rounded-2xl">
+                <div v-if="index % 2 == 0 & !isTablet" class="flex flex-1 lg:ml-10 justify-center items-center lg:border-2 rounded-2xl">
                     <img width="200" :src="item.imagePath">
                 </div>
 
@@ -41,7 +41,7 @@ import togagoImage from '~/assets/image/togago.png';
 import mayflowerImage from '~/assets/image/mayflower.jpg';
 import jmcImage from '~/assets/image/jmc.jpg';
 import iconnectixImage from '~/assets/image/iconnectix.png';
-
+import $ from 'jquery';
 export default {
     data() {
         return {
@@ -102,8 +102,20 @@ export default {
                     websiteName: 'DSI eBizness'
                 }
 
-            ]
+            ],
+            isTablet:false,
         }
+
+    },
+    created(){
+        // console.log($(window).width());
+       
+    },
+    mounted() {
+        if(window.innerWidth < 1024){
+            this.isTablet = true;
+        }
+
 
     }
 }

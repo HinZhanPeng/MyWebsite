@@ -1,6 +1,6 @@
 <template>
     <div class="footer border-t min-h-24 bg-slate-100 dark:bg-slate-800">
-        <div class="w-2/4 flex mx-auto mt-2.5">
+        <div class="flex mt-2.5">
             <div class="dark:text-slate-50  text-xs">
                 @ 2024 Hin Zhan Peng
             </div>

@@ -7,7 +7,7 @@
             <div class="grid gap-10 grid-cols-3">
                 <div v-for="(item, index) in language" class="max-h-16">
                     <div class="flex gap-4">
-                        <svg-icon type="mdi" :path="item.path"></svg-icon>
+                        <svg-icon class="min-w-6" type="mdi" :path="item.path"></svg-icon>
                         <span>{{ item.name }}</span>
                     </div>
                     <div class="bg-stone-400 dark:bg-sky-300">
@@ -24,7 +24,7 @@
             <div class="grid gap-10 grid-cols-3">
                 <div v-for="(item, index) in versionControl" class="max-h-16">
                     <div class="flex gap-4">
-                        <svg-icon type="mdi" :path="item.path"></svg-icon>
+                        <svg-icon class="min-w-6" type="mdi" :path="item.path"></svg-icon>
                         <span>{{ item.name }}</span>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             <div class="grid gap-10 grid-cols-3">
                 <div v-for="(item, index) in CICD" class="max-h-16">
                     <div class="flex gap-4">
-                        <svg-icon type="mdi" :path="item.path"></svg-icon>
+                        <svg-icon class="min-w-6" type="mdi" :path="item.path"></svg-icon>
                         <span>{{ item.name }}</span>
                     </div>
                 </div>
