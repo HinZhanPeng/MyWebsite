@@ -40,7 +40,7 @@ export default {
     },
     mounted() {
         if (localStorage.getItem("darkMode") == 'true') {
-            this.toggleDarkMode();
+            document.documentElement.classList.toggle('dark');
         }
     },
     methods: {
