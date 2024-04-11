@@ -13,7 +13,7 @@
                     <div class="bg-stone-400 dark:bg-sky-300">
                         <div :class=" ['h-1', 'dark:bg-sky-600', `w-${item.level}`, 'bg-lime-400']"></div>
                     </div>
-                    <div>
+                    <div v-if="false">
                         {{ item.level }}
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="bg-stone-400 dark:bg-sky-300">
                         <div :class=" ['h-1', 'dark:bg-sky-600', `w-${item.level}`, 'bg-lime-400']"></div>
                     </div>
-                    <div>
+                    <div v-if="false">
                         {{ item.level }}
                     </div>
                 </div>
@@ -77,7 +77,7 @@ export default {
     data() {
         return {
             language: [
-                { name: 'C#', path: mdiLanguageCsharp, level: '9/10', percent: 9/10*100 },
+                { name: 'C#', path: mdiLanguageCsharp, level: '9/10' },
                 { name: 'Vuejs', path: mdiVuejs, level: '8/10' },
                 { name: 'Nuxt.js', path: mdiNuxt, level: '7/10' },
                 { name: 'JavaScript', path: mdiLanguageJavascript, level: '8/10' },
