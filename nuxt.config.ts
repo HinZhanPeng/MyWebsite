@@ -3,6 +3,9 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: [
+    "./assets/css/raleway-font.css", "./assets/css/roboto-font.css"
+  ],
   modules: [
     
     '@nuxtjs/tailwindcss'

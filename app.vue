@@ -12,7 +12,7 @@ export default {
 
 <template>
   <NuxtLayout>
-    <div class="lg:flex justify-center !bg-slate-100 dark:!bg-slate-800 dark:text-slate-50 leading-7 px-8 lg:px-0">
+    <div class="testFont lg:flex justify-center !bg-slate-100 dark:!bg-slate-800 dark:text-slate-50 leading-7 px-8 lg:px-0">
       <div class="flex flex-col min-h-dvh lg:w-7/10">
         <HeaderMain />
         <NuxtPage class="flex-1 py-5" />
@@ -23,9 +23,8 @@ export default {
   </NuxtLayout>
 </template>
 
-<style scoped>
-.v-application__wrap {
-  min-height: auto !important;
-
-}
+<style>
+  .testFont{
+    font-family: 'raleway';
+  }
 </style>
