@@ -85,7 +85,7 @@ export default {
                     company: 'Iconnectix Sdn Bhd',
                     startDate: 'NOV 2017',
                     endDate: 'APRIL 2018',
-                    description: 'Maintaining & enhancing e-casino website.',
+                    description: 'Maintaining & enhancing e-casino website',
                     imagePath: iconnectixImage,
                     website: 'https://www.iconnectix.com/',
                     websiteName: 'Iconnectix'
