@@ -6,7 +6,7 @@
         Skills: C#, Vuejs, Nuxt.js, JavaScript, jQuery ,CSS3, HTML5<br>
         Working Experiece: {{ workingExperience }}+ years as a software developer <br><br>
 
-        <span class="cursor-pointer" @click="showHireMe">Looking for a hybrid/remote job.</span> <span
+        <span v-if="false" class="cursor-pointer" @click="showHireMe">Looking for a hybrid/remote job.</span> <span
             v-if="showHire">PLEASE HIRE ME.</span>
         
     </div>
