@@ -1,7 +1,13 @@
 <template>
     <div class="header flex border-b min-h-16 items-center sticky top-0 bg-slate-100 dark:bg-slate-800 z-10">
-        <div class="flex flex-1">
-            <div class="dark:text-slate-50 grid gap-4 grid-flow-col">
+        <div class="flex flex-1 items-center">
+            <div class="md:hidden" @click.stop="ClickedHamburger">
+                <svg width="24" height="24">
+                    <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round"></path>
+                </svg>
+            </div>
+            <div class="dark:text-slate-50 hidden md:grid gap-4 grid-flow-col items-center">
                 <NuxtLink class="cursor-pointer" to="/">About Me</NuxtLink>
                 <NuxtLink class="cursor-pointer" to="/WorkingExperience">Working Experience</NuxtLink>
                 <NuxtLink class="cursor-pointer" to="/Skills">Skills</NuxtLink>
@@ -55,6 +61,16 @@ export default {
             }
 
         },
+        ClickedHamburger() {
+            if ($(".hamburger.clicked, .hamburger-main.clicked").length <= 0) {
+                $(".hamburger, .hamburger-main").addClass("clicked");
+
+            }
+            else {
+                $(".hamburger.clicked, .hamburger-main.clicked").removeClass("clicked");
+
+            }
+        }
     }
 }
 </script>
