@@ -33,12 +33,14 @@ export default {
 </script>
 <style>
 .hamburger {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 240px;
     z-index: 111;
     transform: translateX(-240px);
     transition: transform .4s ease;
+    top: 0;
+    left: 0;
 }
 
 .hamburger.clicked {
