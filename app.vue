@@ -1,10 +1,10 @@
 <template>
   <NuxtLayout>
-    <SideBar class="raleway !bg-slate-200 dark:!bg-slate-900 dark:!text-slate-50" />
+
     <div
-      class="raleway md:flex justify-center !bg-slate-100 dark:!bg-slate-800 dark:text-slate-50 leading-7 px-8 md:px-0 hamburger-main"
-      @click="hamburgerMainClicked">
-      <div class="flex flex-col min-h-dvh md:w-7/10">
+      class="raleway md:flex justify-center !bg-slate-100 dark:!bg-slate-800 dark:text-slate-50 leading-7 px-8 md:px-0 " @click="hamburgerMainClicked">
+      <SideBar class="raleway !bg-slate-200 dark:!bg-slate-900 dark:!text-slate-50" />
+      <div class="flex flex-col min-h-dvh md:w-7/10 hamburger-main" >
 
         <HeaderMain />
         <NuxtPage class="flex-1 py-5" />
