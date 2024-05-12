@@ -2,9 +2,8 @@
     <div class="">
         Hin Zhan Peng <br>
         <span v-if="false">Age {{ age }} <br></span>
-        Senior Software Developer at Mayflower Holidays Sdn Bhd<br>
-        Skills: C#, Vuejs, Nuxt.js, JavaScript, jQuery, CSS3, HTML5<br>
-        Working Experience: {{ workingExperience }}+ years as a software developer <br><br>
+        Senior Software Developer<br>
+        Working Experience: {{ workingExperience }}+ years<br><br>
 
         <span v-if="false" class="cursor-pointer" @click="showHireMe">Looking for a hybrid/remote job.</span> <span
             v-if="showHire">PLEASE HIRE ME.</span>
