@@ -4,7 +4,8 @@
             <div v-for="(item, index) in workingExperience" class="lg:flex border-b !pb-10 last:!border-b-0" style="    opacity: 1;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;">
-                <div v-if="index % 2 > 0 || isTablet" class="flex flex-1 lg:mr-10 justify-center items-center lg:border-2 rounded-2xl mb-10 lg:mb-0">
+                <div v-if="index % 2 > 0 || isTablet"
+                    class="flex flex-1 lg:mr-10 justify-center items-center lg:border-2 rounded-2xl mb-10 lg:mb-0">
                     <img width="200" :src="item.imagePath">
                 </div>
                 <div class="grid gap-10 lg:w-1/3 text-center">
@@ -22,11 +23,13 @@
                     <div class="text-sm" v-html="item.description">
                     </div>
                     <div class="font-extrabold text-xl">
-                        <a target="_blank" :href="item.website"><span class="underline underline-offset-1">Website</span></a>
+                        <a target="_blank" :href="item.website"><span
+                                class="underline underline-offset-1">Website</span></a>
                     </div>
                 </div>
-                
-                <div v-if="index % 2 == 0 & !isTablet" class="flex flex-1 lg:ml-10 justify-center items-center lg:border-2 rounded-2xl">
+
+                <div v-if="index % 2 == 0 & !isTablet"
+                    class="flex flex-1 lg:ml-10 justify-center items-center lg:border-2 rounded-2xl">
                     <img width="200" :src="item.imagePath">
                 </div>
 
@@ -103,16 +106,16 @@ export default {
                 }
 
             ],
-            isTablet:false,
+            isTablet: false,
         }
 
     },
-    created(){
+    created() {
         // console.log($(window).width());
-       
+
     },
     mounted() {
-        if(window.innerWidth < 1024){
+        if (window.innerWidth < 1024) {
             this.isTablet = true;
         }
 
